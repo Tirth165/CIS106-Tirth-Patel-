@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 06:50:24 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMTU7MDY6NDI6MzUgUE07MzQ0NQ=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMTU7MDY6NTA6MjQgUE07MTszNTUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="FirstExamScore" type="Real" array="False" size=""/>
+            <declare name="SecondExamScore" type="Real" array="False" size=""/>
+            <declare name="TotalExamScore" type="Real" array="False" size=""/>
+            <input variable="FirstExamScore"/>
+            <input variable="SecondExamScore"/>
+            <assign variable="TotalExamScore" expression="FirstExamScore * .60 + SecondExamScore * .40"/>
+            <output expression="&quot; TotalExamScore: &quot; &amp; TotalExamScore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

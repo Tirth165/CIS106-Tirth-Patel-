@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 07:52:35 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMTU7MDc6NDg6MjkgUE07MzQ1NQ=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMTU7MDc6NTI6MzUgUE07MTszNTU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="FixedCosts" type="Real" array="False" size=""/>
+            <declare name="PricePerUnit" type="Real" array="False" size=""/>
+            <declare name="CostPerUnit" type="Real" array="False" size=""/>
+            <declare name="BreakEvenPoint" type="Real" array="False" size=""/>
+            <input variable="FixedCosts"/>
+            <input variable="PricePerUnit"/>
+            <input variable="CostPerUnit"/>
+            <assign variable="BreakEvenPoint" expression="FixedCosts / PricePerUnit - CostPerUnit"/>
+            <output expression="&quot; BreakEvenPoint : &quot; &amp; BreakEvenPoint" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
