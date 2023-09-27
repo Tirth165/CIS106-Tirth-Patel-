@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-26 04:50:55 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMjY7MDQ6MjM6MTIgUE07MzQzOQ=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMjY7MDQ6NTA6NTUgUE07MTszNTU0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="NumberOfDependents" type="Real" array="False" size=""/>
+            <declare name="GrossIncome" type="Real" array="False" size=""/>
+            <declare name="AdjustedGrossIncome" type="Real" array="False" size=""/>
+            <declare name="IncomeTaxRate" type="Real" array="False" size=""/>
+            <declare name="IncomeTax" type="Real" array="False" size=""/>
+            <declare name="TotalIncomeTax" type="Real" array="False" size=""/>
+            <input variable="LastName"/>
+            <input variable="NumberOfDependents"/>
+            <input variable="GrossIncome"/>
+            <assign variable="AdjustedGrossIncome" expression="GrossIncome - NumberOfDependents * 12000"/>
+            <assign variable="IncomeTaxRate" expression="50000 * .20"/>
+            <assign variable="IncomeTax" expression="100"/>
+            <output expression="&quot;TotalIncomeTax: &quot; &amp; TotalIncomeTax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

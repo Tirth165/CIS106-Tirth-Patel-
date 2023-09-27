@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-26 03:50:26 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMjY7MDM6NDc6MzEgUE07MzQ0NQ=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMjY7MDM6NTA6MjYgUE07MTszNTUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NumberOfBooks" type="Real" array="False" size=""/>
+            <declare name="CostPerBook" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <input variable="NumberOfBooks"/>
+            <input variable="CostPerBook"/>
+            <assign variable="Total" expression="25 + CostPerBook"/>
+            <output expression="&quot;Total: &quot; &amp; Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

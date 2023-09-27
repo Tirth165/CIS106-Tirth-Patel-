@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-22 04:29:22 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMjI7MDQ6MjE6MTEgUE07MzQzMg=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMDktMjI7MDQ6Mjk6MjIgUE07MTszNTUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Item" type="String" array="False" size=""/>
+            <declare name="Quantity" type="Real" array="False" size=""/>
+            <declare name="UnitPrice" type="Real" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Real" array="False" size=""/>
+            <input variable="Item"/>
+            <input variable="Quantity"/>
+            <input variable="UnitPrice"/>
+            <assign variable="ExtendedPrice" expression="Quantity * UnitPrice"/>
+            <output expression="&quot;UnitPrice: &quot; &amp; UnitPrice" newline="True"/>
+            <output expression="&quot;ExtendedPrice: &quot; &amp; ExtendedPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
