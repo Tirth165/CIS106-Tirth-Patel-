@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 07:30:45 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMDQ7MDc6MjQ6MDMgUE07MzQzMQ=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMDQ7MDc6MzA6NDUgUE07MTszNTQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="EmployeeLastN" type="String" array="False" size=""/>
+            <declare name="Salary" type="Real" array="False" size=""/>
+            <declare name="JobLevel" type="Real" array="False" size=""/>
+            <declare name="BonusRate" type="Real" array="False" size=""/>
+            <declare name="Bonus" type="Real" array="False" size=""/>
+            <input variable="EmployeeLastN"/>
+            <input variable="Salary"/>
+            <input variable="BonusRate"/>
+            <input variable="JobLevel"/>
+            <assign variable="Bonus" expression="Salary * BonusRate"/>
+            <if expression="BonusRate &gt; 10">
+                <then>
+                    <assign variable="Bonus" expression=".25"/>
+                </then>
+                <else>
+                    <if expression="BonusRate &gt; 5 and&#13;&#10;BonusRate &lt;= 9">
+                        <then>
+                            <assign variable="Bonus" expression=".20"/>
+                        </then>
+                        <else>
+                            <if expression="BonusRate &gt;= 10">
+                                <then>
+                                    <assign variable="Bonus" expression=".10"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;EmployeeLastN: &quot; &amp; EmployeeLastN" newline="True"/>
+            <output expression="&quot;Bonus: &quot; &amp; Bonus" newline="True"/>
+            <output expression="&quot;Salary: &quot; &amp; Salary" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

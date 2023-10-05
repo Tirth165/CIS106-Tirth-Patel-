@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-04 07:19:23 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMDQ7MDc6MDM6MjUgUE07MzQzMg=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMDQ7MDc6MTk6MjMgUE07MjszNTQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NumberConcertT" type="Real" array="False" size=""/>
+            <declare name="PricePerT" type="Real" array="False" size=""/>
+            <declare name="TotalCost" type="Real" array="False" size=""/>
+            <declare name="Volume" type="Real" array="False" size=""/>
+            <input variable="NumberConcertT"/>
+            <input variable="PricePerT"/>
+            <input variable="Volume"/>
+            <assign variable="TotalCost" expression="NumberConcertT * PricePerT"/>
+            <if expression="Volume &gt;= 25">
+                <then>
+                    <assign variable="PricePerT" expression="50"/>
+                </then>
+                <else>
+                    <if expression="Volume &gt; 10 and &#13;&#10;Volume &lt;= 24">
+                        <then>
+                            <assign variable="PricePerT" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="Volume &gt; 5 and&#13;&#10;Volume &lt;= 9">
+                                <then>
+                                    <assign variable="PricePerT" expression="70"/>
+                                </then>
+                                <else>
+                                    <if expression="Volume &lt; 5">
+                                        <then>
+                                            <assign variable="PricePerT" expression="75"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;NumberConcertT: &quot; &amp; NumberConcertT" newline="True"/>
+            <output expression="&quot;PricePerT: &quot; &amp; PricePerT" newline="True"/>
+            <output expression="&quot;TotalCost: &quot; &amp; TotalCost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

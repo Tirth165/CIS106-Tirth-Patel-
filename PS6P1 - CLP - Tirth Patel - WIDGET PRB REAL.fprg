@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-03 05:46:01 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMDM7MDU6MjY6NDkgUE07MzQ0MA=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMDM7MDU6NDY6MDEgUE07MTszNTM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="QuantityAmount" type="Real" array="False" size=""/>
+            <declare name="QuantityPrice" type="Real" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Real" array="False" size=""/>
+            <declare name="Tax" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <input variable="QuantityAmount"/>
+            <input variable="QuantityPrice"/>
+            <assign variable="QuantityPrice" expression="QuantityAmount * QuantityPrice"/>
+            <assign variable="Tax" expression=".7 * QuantityPrice"/>
+            <assign variable="Total" expression="Tax + QuantityPrice"/>
+            <if expression="QuantityPrice &gt; 10000">
+                <then>
+                    <assign variable="ExtendedPrice" expression="10"/>
+                </then>
+                <else>
+                    <if expression="QuantityPrice &gt; 5000 and QuantityPrice &lt; 10000">
+                        <then>
+                            <assign variable="ExtendedPrice" expression="20"/>
+                        </then>
+                        <else>
+                            <if expression="QuantityPrice &lt; 5000">
+                                <then>
+                                    <assign variable="ExtendedPrice" expression="30"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;ExtendedPrice: &quot; &amp; ExtendedPrice" newline="True"/>
+            <output expression="&quot;Tax: &quot; &amp; Tax" newline="True"/>
+            <output expression="&quot;Total: &quot; &amp; Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
