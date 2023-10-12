@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-11 07:58:25 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMTE7MDc6NDM6NDkgUE07MzQ0MA=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMTE7MDc6NTg6MjUgUE07MTszNTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Quantity" type="Integer" array="False" size=""/>
+            <declare name="Price" type="Integer" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Integer" array="False" size=""/>
+            <declare name="Discount" type="Integer" array="False" size=""/>
+            <declare name="Total" type="Integer" array="False" size=""/>
+            <input variable="Quantity"/>
+            <input variable="Price"/>
+            <assign variable="ExtendedPrice" expression="Quantity * Price"/>
+            <if expression="ExtendedPrice &gt; 10000">
+                <then>
+                    <assign variable="Discount" expression=".25"/>
+                </then>
+                <else>
+                    <if expression="ExtendedPrice &lt; 10000">
+                        <then>
+                            <assign variable="Discount" expression=".10"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <assign variable="Total" expression="ExtendedPrice - Discount"/>
+            <while expression="Total = ExtendedPrice - Discount">
+                <assign variable="Total" expression="ExtendedPrice - Discount"/>
+                <output expression="&quot;Total: &quot; &amp; Total" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

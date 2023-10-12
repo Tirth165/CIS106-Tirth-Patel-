@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-11 07:42:30 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMTE7MDc6MzI6NTYgUE07MzQzNg=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMTE7MDc6NDI6MzAgUE07MTszNTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="HoursWorked" type="Integer" array="False" size=""/>
+            <declare name="RateOfPay" type="Integer" array="False" size=""/>
+            <declare name="GrossPay" type="Integer" array="False" size=""/>
+            <declare name="Start" type="Integer" array="False" size=""/>
+            <declare name="Stop" type="Integer" array="False" size=""/>
+            <input variable="LastName"/>
+            <input variable="HoursWorked"/>
+            <input variable="RateOfPay"/>
+            <assign variable="Start" expression="1"/>
+            <assign variable="Stop" expression="40"/>
+            <assign variable="GrossPay" expression="RateOfPay * HoursWorked"/>
+            <while expression="Start &lt;= Stop">
+                <assign variable="GrossPay" expression="RateOfPay * HoursWorked"/>
+                <output expression="&quot;GrossPay: &quot; &amp; GrossPay" newline="True"/>
+                <output expression="&quot;LastName: &quot; &amp; LastName" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

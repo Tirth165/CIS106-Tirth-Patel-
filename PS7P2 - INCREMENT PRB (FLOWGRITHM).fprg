@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Tirth Patel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-11 04:45:42 PM"/>
+        <attribute name="created" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMTE7MDQ6MzE6MTMgUE07MzQyNQ=="/>
+        <attribute name="edited" value="VGlydGggUGF0ZWw7REVTS1RPUC1KVk82VklDOzIwMjMtMTAtMTE7MDQ6NDU6NDIgUE07MTszNTQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Startvalue" type="Integer" array="False" size=""/>
+            <declare name="Stopvalue" type="Integer" array="False" size=""/>
+            <declare name="Increment" type="Integer" array="False" size=""/>
+            <declare name="AllNumbers" type="Integer" array="False" size=""/>
+            <input variable="Startvalue"/>
+            <input variable="StopValue"/>
+            <assign variable="Increment" expression="1"/>
+            <while expression="Startvalue &lt;= Stopvalue">
+                <assign variable="Startvalue" expression="Startvalue + 1"/>
+                <output expression="&quot;Loop Increment: &quot; &amp; Startvalue" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
